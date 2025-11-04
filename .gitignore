@@ -1,0 +1,16 @@
+
+# Build
+bin/
+obj/
+# VS
+.vs/
+# Rider
+.idea/
+# dotenv
+*.user
+*.suo
+*.vscode/
+# Docker
+**/Dockerfile.*
+/OrderService/Controllers/WeatherForecastController.cs
+/UserService/Controllers/WeatherForecastController.cs

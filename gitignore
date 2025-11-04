@@ -1,0 +1,21 @@
+# .NET build
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.db
+*.sqlite
+*.log
+
+# Docker
+.env
+docker-compose.override.yml
+
+# Test / Coverage
+TestResults/
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db

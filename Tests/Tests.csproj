@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Required so testhost/test runner assemblies are resolved -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="Testcontainers.Kafka" Version="4.8.1" />
+
+    <!-- xUnit + VS runner -->
+    <PackageReference Include="xunit" Version="2.7.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+    <!-- Optional: fluent asserts & coverage -->
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Reference the SUT project (this will bring Confluent.Kafka transitively if needed) -->
+    <ProjectReference Include="..\OrderService\OrderService.csproj" />
+  </ItemGroup>
+
+</Project>
