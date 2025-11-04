@@ -111,7 +111,7 @@ git init
 git add .
 git commit -m "Initial commit – microservices demo"
 git branch -M main
-git remote add origin https://github.com/<your-username>/TakeHomeTest.git
+git remote add origin https://github.com/rahamath-ma/TakeHomeTestMicroservices.git
 git push -u origin main
 ```
 ## 🤖 AI Tools & Development Approach (if you choose to use them)
